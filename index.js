@@ -15,14 +15,14 @@ server.listen(port, () => {
     console.log("Server is running on port " + port);
 });
 
-// var listUser  = [];
-// io.on("connection", (socket) => {
-//     console.log("user connecting...");
+var listUser  = [];
+io.on("connection", (socket) => {
+    console.log("user connecting...");
 
-//     socket.on('call', (message) => {
-//         console.log('message: ' + message);
-//         io.sockets.emit('receiver_room', {data: message}); // message format "callerId/receiverId"
-//     });
+    socket.on('call', (message) => {
+        console.log('message: ' + message);
+        io.sockets.emit('receiver_room', {data: message}); // message format "callerId/receiverId"
+    });
 
 //     // socket.on('statusCalling', (message) => {
 //     //     console.log('status: ' + message);
