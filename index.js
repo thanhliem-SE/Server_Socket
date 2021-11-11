@@ -5,7 +5,7 @@ var express 	= require('express'),
 	app			= express(),
     server  	= require('http').createServer(app),
     io      	= require('socket.io')(server),
-    port    	= 8081;
+    port    	= 8080;
 
 io.on('connection', (socket) => {
   console.log('a user connected');
