@@ -24,8 +24,5 @@ io.on("connection", (socket) => {
         io.sockets.emit('receiver_room', {data: message}); // message format "callerId/receiverId"
     });
 
-//     // socket.on('statusCalling', (message) => {
-//     //     console.log('status: ' + message);
-//     //     io.sockets.emit('status_calling', {data: message}); // message format "callerId/receiverId"
-//     // });
-// });
+
+});
